@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Staatliches&display=swap');
+
+:root {
+  --nba-logo-color: #006BB7;
+  --main-bg-color: #FEFEFA;
+  --gradient-1: rgba(118,10,25,1);
+  --gradient-2: rgba(186,24,48,1);
+  --top-left-shadow: red;
+  --bottom-right-shadow: orange;
+}
+
+/* To prevent some elements from having diferent treatment
+ * of widht and height such as input and select.
+ */ 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* By default, browsers render most form elements (textareas,
+ * text boxes, buttons, etc) using OS controls or browser controls.
+ * So most of the font properties are taken from the theme the OS 
+ * is currently using. You have to target the form elements 
+ * themselves if you want to change their font/text styles.
+ */
+textarea,
+input, 
+button, 
+select {
+  font-family: inherit;
+  font-size: inherit;
+ }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+/* Mobile friendly alternative to using background-attachment: fixed */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: linear-gradient(45deg, var(--gradient-1) 0%, var(--gradient-2) 100%);
+  /*
+    Uncomment the following for a nice, background, transparent gradient on top, image background.
+  --background-size: cover;
+  --background-repeat: no-repeat;
+  --background-position: center;
+  --background-image: linear-gradient(
+  --    115deg,
+  --    rgba(58, 58, 158, 0.8),
+  --    rgba(136, 136, 206, 0.7)
+  --  ),
+  --  url(https://raw.githubusercontent.com/lasjorg/fcc-form-example-image/master/67103817-7c51e200-f18b-11e9-975f-f74561336a9a-lj.jpg);
+  */
+}
+
+textarea {
+  resize: vertical;
+}
+
+.title {
+  font-family: 'Staatliches', cursive;
+  text-align: center;
+}
+
+.nba {
+  color: var(--nba-logo-color);
+}
+
+.text-intro {
+  font-size: 0.875rem;
+}
+
+.container {
+  background-color: var(--main-bg-color);
+  width: 100%;
+  margin: 30px auto 30px auto;
+  padding: 30px 30px 30px 30px;
+  border-width:10px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 2%;
+  box-shadow: 3px 3px var(--bottom-right-shadow), -3px -3px var(--top-left-shadow);
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 610px;
+  }
+}
+
+.form-group {
+  margin-top: 0.65rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.form-control {
+  margin-top: 0.2rem;
+  width: 100%;  
+  font-size: 0.85rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-left: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control--single-line {
+  height: 2.15rem;
+}
+
+.form-control:focus {
+  border-color: var(--nba-logo-color);
+  outline: 0;
+}
+
+.radio-button,
+.checkbox-button {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 10px;
+}
+
+.radio-label,
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--nba-logo-color);
+  color: #fff;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: bold;
+}

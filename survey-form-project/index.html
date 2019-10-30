@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">        
+        <header>
+            <h1 id="title" class="title">Best <span class="nba">NBA</span> player survey</h1>
+            <p class="text-intro">Help us figure out the best NBA player of all times.</p>
+        </header>
+        <main>
+            <form id="survey-form">
+                <div class="form-group">
+                    <label id="name-label" for="name" class="form-label">Your name</label>
+                    <input class="form-control form-control--single-line" id="name" type="text" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label id="email-label" for="email" class="form-label">Email</label>
+                    <input class="form-control form-control--single-line" id="email" type="email" name="email" placeholder="Enter your Email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label id="number-label" for="number" class="form-label">Age (optional)</label>
+                    <input class="form-control form-control--single-line" id="number" type="number" name="number" min="0" max="150" placeholder="Enter your age">
+                </div>
+
+                <div class="form-group">
+                    <label id="dropdown-label" for="dropdown" class="form-label">Choose your favorite NBA team:</label>
+                    <select class="form-control form-control--single-line" id="dropdown" name="gender">
+                        <option value="" disabled selected>Choose your favorite team</option>
+                        <option value="hawks">Atlanta Hawks</option>
+                        <option value="celtics">Celtics</option>
+                        <option value="hornets">Charlotte Hornets</option>
+                        <option value="bulls">Chicago Bulls</option>
+                        <option value="cavaliers">Cleveland Cavaliers</option>
+                        <option value="pistons">Detroit Pistons</option>
+                        <option value="pacers">Indiana Pacers</option>
+                        <option value="heat">Miami Heat</option>
+                        <option value="bucks">Milwaukee Bucks</option>
+                        <option value="nets">Brooklyn Nets</option>
+                        <option value="knicks">New York Knicks</option>
+                        <option value="magic">Orlando Magic</option>
+                        <option value="76ers">Philadelphia 76ers</option>
+                        <option value="raptors">Toronto Raptors</option>
+                        <option value="wizards">Washington Wizards</option>
+                        <option value="mavericks">Dallas Mavericks</option>
+                        <option value="nuggets">Denver Nuggets</option>
+                        <option value="warriors">Golden State Warriors</option>
+                        <option value="rockets">Houston Rockets</option>
+                        <option value="clippers">Los Angeles Clippers</option>
+                        <option value="lakers">Los Angeles Lakers</option>
+                        <option value="grizzlies">Memphis Grizzlies</option>
+                        <option value="timberwolves">Minnesota Timberwolves</option>
+                        <option value="pelicans">New Orleans Pelicans</option>
+                        <option value="citythunder">Oklahoma City Thunder</option>
+                        <option value="suns">Phoenix Suns</option>
+                        <option value="trailblazers">Portland Trail Blazers</option>
+                        <option value="kings">Sacramento Kings</option>
+                        <option value="spurs">San Antonio Spurs</option>
+                        <option value="jazz">Utah Jazz</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <p>What is the best NBA player of all times?</p>
+                    <label for="larrybirdd" class="radio-label"><input id="larrybirdd" class="radio-button" type="radio" name="radio" value="larrybird">Larry Bird</label>
+                    <label for="juliuserving" class="radio-label"><input id="juliuserving" class="radio-button" type="radio" name="radio" value="juliuserving">Julius Erving</label>
+                    <label for="shaquilleoneal" class="radio-label"><input id="shaquilleoneal" class="radio-button" type="radio" name="radio" value="shaquilleoneal">Shaquille O’Neal</label>
+                    <label for="wiltchamberlain" class="radio-label"><input id="wiltchamberlain" class="radio-button" type="radio" name="radio" value="wiltchamberlain">Wilt Chamberlain</label>
+                    <label for="maginjohnson" class="radio-label"><input id="maginjohnson" class="radio-button" type="radio" name="radio" value="maginjohnson">Magic Johnson</label>
+                    <label for="kareemabduljabbar" class="radio-label"><input id="kareemabduljabbar" class="radio-button" type="radio" name="radio" value="kareemabduljabbar">Kareem Abdul Jabbar</label>
+                    <label for="timduncan" class="radio-label"><input id="timduncan" class="radio-button" type="radio" name="radio" value="timduncan">Tim Duncan</label>
+                    <label for="billrussell" class="radio-label"><input id="billrussell" class="radio-button" type="radio" name="radio" value="billrussell">Bill Russell</label>
+                    <label for="lebronjames" class="radio-label"><input id="lebronjames" class="radio-button" type="radio" name="radio" value="lebronjames">Lebron James</label>
+                    <label for="michaeljordan" class="radio-label"><input id="michaeljordan" class="radio-button" type="radio" name="radio" value="michaeljordan">Michael Jordan</label>
+                </div>
+
+                <div class="form-group">
+                    <p>Which of the following attributes would you highlight on him?</p>
+                    <label for="shooting" class="checkbox-label"><input id="shooting" type="checkbox" class="checkbox-button" name="checkbox" value="shooting">Shooting</label>
+                    <label for="foulshooting" class="checkbox-label"><input id="foulshooting" type="checkbox" class="checkbox-button" name="checkbox" value="foulshooting">Foul shooting</label>
+                    <label for="layups" class="checkbox-label"><input id="layups" type="checkbox" class="checkbox-button" name="checkbox" value="layups">Lay ups</label>
+                    <label for="finishingmoves" class="checkbox-label"><input id="finishingmoves" type="checkbox" class="checkbox-button" name="checkbox" value="finishingmoves">Finishing moves</label>
+                    <label for="passing" class="checkbox-label"><input id="passing" type="checkbox" class="checkbox-button" name="checkbox" value="passing">Passing</label>
+                    <label for="dribblingandhandballing" class="checkbox-label"><input id="dribblingandhandballing" type="checkbox" class="checkbox-button" name="checkbox" value="dribblingandhandballing">Dribblilng and ballhandling</label>
+                    <label for="defense" class="checkbox-label"><input id="defense" type="checkbox" class="checkbox-button" name="checkbox" value="defense">Defense</label>
+                    <label for="rebounding" class="checkbox-label"><input id="rebounding" type="checkbox" class="checkbox-button" name="checkbox" value="rebounding">Rebounding</label>
+                </div>
+                
+                <div class="form-group">
+                    <p>Optionally, let us know why you have chosen this player instead of another.</p>
+                    <textarea placeholder="I have chosen XXX because of..." class="form-control" id="textarea" name="textarea" rows="10"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button id="submit" type="submit" class="submit-button">Submit</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
