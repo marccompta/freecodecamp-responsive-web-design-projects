@@ -183,13 +183,59 @@ iframe {
 
 #pricing-tiers {
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .pricing-tier {
     width: 30%;
     border: 1px solid black;
-    height: 100px;
     background-color: white;
     min-width: 250px;
+    position: relative;
+}
+
+.pricing-tier-title {
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    background-color: gold;
+}
+
+.pricing-tier-content {
+    padding: 10px 10px 2.75rem 10px;
+}
+
+.pricing-tier-content li:before {
+    content: '✔️';
+    margin-right: 10px;
+    }
+
+.pricing-tier-price {
+    position: absolute;
+    bottom: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+}
+
+ul {
+    padding-inline-start: 5px;
+}
+
+li {
+    list-style: none;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
 }
