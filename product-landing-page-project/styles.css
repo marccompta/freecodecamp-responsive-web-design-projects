@@ -5,6 +5,7 @@
     --main-color: skyblue;
     --secondary-color: #C7A4B9;
     --pricing-section-color: #C7A5CC;
+    --product-section-color: ghostwhite;
 }
 
 body {
@@ -69,7 +70,7 @@ header nav li {
 }
 
 .container-product {    
-    background-color: ghostwhite;
+    background-color: var(--product-section-color);
 }
 
 .container-pricing {
@@ -125,7 +126,7 @@ input {
 }
 
 input:focus {
-    border-color: yellowgreen;
+    border-color: cyan;
     outline: 0;
 }
 
@@ -162,8 +163,8 @@ iframe {
     color: black;
 }
 
-#video {
-    margin-top: 22px;
+#video-container {
+    margin-top: 44px;
     display: flex;
     justify-content: center;
 }
