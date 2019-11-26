@@ -29,8 +29,8 @@
         </ul>
     </nav>
     <main id="main-doc">
-        <section class="main-section">
-            <header class="section-title" id="First_section">
+        <section id="First_section" class="main-section">
+            <header class="section-title">
                 First section
             </header>
             <p>
@@ -44,13 +44,12 @@
                 lobortis, ornare nisl vel, finibus lorem. Aenean non volutpat lorem. Sed vel lectus vitae sem porta
                 tincidunt et a diam.
             </p>
-            <code
-               >var uuid = require("uuid");
-                var id = uuid.v4();
-            </code>
+            <pre><code
+>var uuid = require("uuid");
+var id = uuid.v4();</code></pre>
         </section>
-        <section class="main-section">
-            <header class="section-title" id="Second_section">
+        <section id="Second_section" class="main-section">
+            <header class="section-title">
                 Second section
             </header>
             <p>
@@ -63,13 +62,12 @@
                 ultrices elit quis elit laoreet, ut vulputate nisl tempus. Etiam orci elit, fermentum in mi eu, eleifend
                 congue metus.
             </p>
-                <code
-                   >// number of spaces for a tab
-                    "editor.tabSize": 2,
-                    
-                    // insert spaces when pressing tab
-                    "editor.insertSpaces": true
-                </code>
+                <pre><code
+>// number of spaces for a tab
+"editor.tabSize": 2,
+
+// insert spaces when pressing tab
+"editor.insertSpaces": true</code></pre>
             <p>
                 Aenean accumsan diam vitae ornare egestas. Duis ac nibh ultrices, bibendum risus sed, tempor risus.
                 Etiam faucibus tellus non ligula tincidunt finibus. Integer id eros faucibus, elementum felis et,
@@ -77,8 +75,8 @@
                 augue in risus accumsan laoreet. Ut blandit iaculis facilisis.
             </p>
         </section>
-        <section class="main-section">
-            <header class="section-title" id="Third_section">
+        <section id="Third_section" class="main-section">
+            <header class="section-title">
                 Third section
             </header>
             <p>
@@ -89,10 +87,9 @@
                 gravida tincidunt. Phasellus erat ipsum, dictum in sapien ut, facilisis venenatis enim. Etiam commodo
                 rutrum odio ut dictum.
             </p>
-                <code
-                   >let r = Math.random().toString(36).substring(7);
-                    console.log("random", r);
-                </code>
+                <pre><code
+>let r = Math.random().toString(36).substring(7);
+console.log("random", r);</code></pre>
             <p>
                 Aenean quis aliquet erat. Mauris sollicitudin lorem id nisi tincidunt auctor. Sed pellentesque nisl eget
                 nulla aliquam fringilla. Nullam commodo gravida ipsum. Nam pretium tortor lacus, quis facilisis purus
@@ -122,8 +119,8 @@
                 bibendum ante. Pellentesque gravida tellus metus. Phasellus eget vestibulum lectus.
             </p>
         </section>
-        <section class="main-section">
-            <header class="section-title" id="Fourth_section">
+        <section id="Fourth_section" class="main-section">
+            <header class="section-title">
                 Fourth section
             </header>
             <p>
@@ -135,13 +132,12 @@
                 molestie suscipit sapien eget porta. Morbi pellentesque sapien non urna lacinia viverra. Sed mollis ante
                 vel enim dignissim blandit.
             </p>
-                <code
-                   >var crypto = require("crypto");
-                    var id = crypto.randomBytes(20).toString('hex');
-                </code>
+                <pre><code
+>var crypto = require("crypto");
+var id = crypto.randomBytes(20).toString('hex');</code></pre>
         </section>
-        <section class="main-section">
-            <header class="section-title" id="Fifth_section">
+        <section id="Fifth_section" class="main-section">
+            <header class="section-title">
                 Fifth section
             </header>
             <p>
@@ -150,19 +146,18 @@
                 elit. Phasellus eget faucibus elit. Praesent pharetra accumsan porta. Quisque accumsan est eget leo
                 rutrum, a ornare tellus congue. Pellentesque a est et tortor auctor tincidunt.
             </p>
-                <code
-                   >function makeid(length) {
-                        var result           = '';
-                        var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-                        var charactersLength = characters.length;
-                        for ( var i = 0; i < length; i++ ) {
-                            result += characters.charAt(Math.floor(Math.random() * charactersLength));
-                        }
-                        return result;
-                        }
-                        
-                        console.log(makeid(5));
-                </code>
+                <pre><code
+>function makeid(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
+
+console.log(makeid(5));</code></pre>
             <p>
                 Mauris vel risus eros. Integer sit amet arcu lobortis, blandit felis quis, cursus magna. In faucibus
                 felis et leo tincidunt viverra. Donec sed auctor nibh. Proin at ligula vel lorem efficitur aliquet. Sed
