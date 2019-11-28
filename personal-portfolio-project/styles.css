@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Cantarell|Poppins|Roboto&display=swap');
+
+/* Custom properties/variables  */
+:root {
+    --main-background-color: #EEEDDF;
+    --navbar-color: #242729;
+    --navbar-text-color: #FFFFFF;
+    --triangle-color: #FFFFFF;
+    
+    --navbar-distance-to-top: 50px;
+    --navbar-height: 50px;
+
+    --welcome-section-top-offset: 125px;
+
+    --project-section-background-color: #45567d;
+}
+
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+/* box-sizing and font sizing */
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+  
+    /* Set font size for easy rem calculations
+     * default document font size = 16px, 1rem = 16px, 100% = 16px
+     * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+    border-left: 0 solid transparent;
+    border-right: 45vw solid transparent;
+    border-top: 95vh solid var(--triangle-color);
+    z-index: 10;
+}
+
+.title {
+    position: absolute;
+    top: var(--navbar-distance-to-top);
+    left: 5vw;
+    height: var(--navbar-height);
+    z-index: 100;
+}
+
+.title--first-line {
+    font-family: 'Cantarell', sans-serif;
+    font-size: 4rem;
+}
+
+.title--second-line {
+    margin-top: 10px;
+    margin-left: 12px;
+    font-family: 'Cantarell', sans-serif;
+    font-size: 2.25rem;
+}
+
+#personal-picture {
+    margin-top: 65px;
+    width: 40%;
+    height: auto;
+}
+
+#navbar {
+    position: absolute;
+    display: flex;
+    align-items: stretch;
+    top: var(--navbar-distance-to-top);
+    left: 0;
+    height: var(--navbar-height);
+    width: 100%;
+    padding: 5px;
+    background-color: var(--navbar-color);
+    color: var(--navbar-text-color);
+    z-index: 1;
+}
+
+#navbar ul {
+    position: relative;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    left: 45vw;
+    width: 50vw;
+}
+
+#navbar ul li {
+    display: inline;
+    margin-right: 40px;
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+#welcome-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-background-color);
+}
+
+#welcome-section .description {
+    position: absolute;
+    left: 35vw;
+    top: calc(var(--navbar-distance-to-top) + var(--navbar-height) + var(--welcome-section-top-offset));
+    right: 5vw;
+}
+
+#welcome-section p {
+    text-align: justify;
+    margin-top: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+}
+
+p.stress {
+    font-weight: bold;
+}
+
+#projects {
+    background-color: var(--project-section-background-color);
+}
+
+.section-content {
+    padding-top: 40px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+}
