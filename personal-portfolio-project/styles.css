@@ -11,7 +11,8 @@
     
     --navbar-color: #242729;
     --navbar-text-color: #FFFFFF;
-    --navbar-distance-to-top: 50px;
+    /* --navbar-distance-to-top: 50px; */
+    --navbar-distance-to-top: 0;
     --navbar-height: 50px;
 
     --project-section-background-color: ghostwhite;
@@ -52,7 +53,8 @@ html {
     border-left: 0 solid transparent;
     border-right: 5vw solid transparent;
     border-top: 85vh solid var(--left-triangle-color);
-    z-index: 10;
+    /* z-index: 10; */
+    z-index: 100;
 }
 
 .triangle-bottom {
@@ -64,11 +66,13 @@ html {
     border-bottom: 0 solid transparent;
     border-top: 5vh solid transparent;
     border-right: 85vw solid var(--bottom-triangle-color);
-    z-index: 10;
+    /* z-index: 10; */
+    z-index: 1;
 }
 
 #navbar {
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     display: flex;
     align-items: stretch;
     top: var(--navbar-distance-to-top);
@@ -77,7 +81,8 @@ html {
     width: 100%;
     padding: 5px;
     background-color: var(--navbar-color);
-    z-index: 1;
+    /* z-index: 1; */
+    z-index: 10;
 }
 
 #navbar ul {
