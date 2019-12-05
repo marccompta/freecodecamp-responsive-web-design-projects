@@ -1,3 +1,4 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Raleway|Cantarell|Poppins|Roboto&display=swap');
 
 /* Custom properties/variables  */
@@ -14,8 +15,8 @@
 
     --welcome-section-top-offset: 125px;
 
-    --project-section-background-color: skyblue;
-    --project-tile-background-color: red;
+    --project-section-background-color: ghostwhite;
+    --project-tile-background-color: #303841;
     --project-title-hover-color: orange;
 }
 
@@ -43,7 +44,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.triangle {
+.triangle-left {
     position: absolute;
     width: 0;
     height: 0;
@@ -55,15 +56,15 @@ html {
     z-index: 10;
 }
 
-.inverted-triangle {
+.triangle-bottom {
     position: absolute;
     width: 0;
     height: 0;
     right: 0;
     bottom: 0;
-    border-right: 0 solid transparent;
-    border-left: 5vw solid transparent;
-    border-bottom: 100px solid black;
+    border-bottom: 0 solid transparent;
+    border-top: 5vh solid transparent;
+    border-right: 85vw solid ghostwhite;
     z-index: 10;
 }
 
@@ -109,59 +110,65 @@ html {
     background-image: var(--main-background-color);
 }
 
-#welcome-section .title {
-    width: 100%;
-    height: 100%;
-    left: 15vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /*top: calc(var(--navbar-distance-to-top) + var(--navbar-height) + var(--welcome-section-top-offset));*/
-    /*top: calc(100vh / 2);*/
+.title {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#welcome-section .title > h1 {
+#welcome-section .title {
+  left: 15vw;
+}
+
+.nice-title {
     font-family: 'Raleway', sans-serif;
     font-size: 6rem;
     font-weight: 700;
     text-align: center;
     color: var(--main-title-color);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-#welcome-section .title > p {
+.title > p {
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     font-weight: 200;
-    font-style: italic;
-    color: var(--main-subtitle-color);
+    margin-top: 1.5rem;
 }
 
-#welcome-section p {
-    text-align: justify;
-    margin-top: 1.5rem;
-    font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
+#welcome-section .title > p {
+  font-style: italic;
+  color: var(--main-subtitle-color);
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 4.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.title > h2 {
+  margin-bottom: inherit;
 }
 
 #projects {
     position: relative;
-    /*background-color: var(--project-section-background-color);*/
-    background-color: #09203f;
-background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+    background-color: var(--project-section-background-color);
+}
+
+.section {
+  padding-top: 8rem;
+  padding-bottom: 4rem;
 }
 
 .section-content {
     width:80%;
     margin: auto;
-    padding-top: 40px;
-}
-
-h2 {
-    text-align: center;
-    font-size: 3rem;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 4rem;
 }
 
 /* "Automagic" image grid using no media queries */
@@ -170,10 +177,17 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 4rem;
     width: 100%;
-    /* max-width: 1280px; */
+    max-width: 1280px;
     margin: 0 auto;
     margin-bottom: 6rem;
-  }
+}
+
+  .projects-grid > a {
+    font-family: 'Poppins', sans-serif;
+    color: var(--main-title-color);
+    text-decoration: none;
+    text-align: center;
+}
 
   @media (max-width: 30.625em) {  
     .projects-grid {
@@ -205,4 +219,36 @@ h2 {
   .project-title {
     font-size: 2rem;
     padding: 2rem 0.5rem;
+  }
+
+  #links {
+    height: 80vh;
+    background-image: linear-gradient(121deg, ghostwhite 45%, #ffffff 45%, #ffffff 50%, ghostwhite 50%, ghostwhite 95%, #ffffff 95%, #ffffff 100%);
+    background-size: 58.33px 97.08px;
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .contact-details {
+    margin: 0 10px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 2.4rem;
+    text-decoration: none;
+    transition: transform 0.3s ease-out;
+  }
+
+  .contact-details:hover {
+    transform: translateY(8px);
+  }
+
+  .fa-twitter {
+    color: #00ACEE;
   }
