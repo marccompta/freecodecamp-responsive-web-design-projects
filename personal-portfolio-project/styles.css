@@ -183,12 +183,6 @@ h2 {
     text-align: center;
 }
 
-@media (max-width: 30.625em) {  
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .project {
     background: var(--project-tile-background-color);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -249,4 +243,20 @@ h2 {
 
 .fa-linkedin{
     color: #0e76a8;
+}
+
+@media (max-width: 750px) {  
+  .triangle-left {
+    display: none;
+  }
+
+  #navbar ul {
+    justify-content: space-evenly;
+    left: initial;
+    width: 100vw;
+  }
+
+  #navbar ul li {
+    margin: inherit;
+  }
 }
