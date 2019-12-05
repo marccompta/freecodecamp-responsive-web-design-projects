@@ -1,18 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Cantarell|Poppins|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway|Cantarell|Poppins|Roboto&display=swap');
 
 /* Custom properties/variables  */
 :root {
-    --main-background-color: #EEEDDF;
+    --main-background-color: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    --main-title-color: #f0f0f0;
+    --main-subtitle-color: #be3144;
     --navbar-color: #242729;
     --navbar-text-color: #FFFFFF;
-    --triangle-color: #FFFFFF;
+    --triangle-color: #000000;
     
     --navbar-distance-to-top: 50px;
     --navbar-height: 50px;
 
     --welcome-section-top-offset: 125px;
 
-    --project-section-background-color: #45567d;
+    --project-section-background-color: skyblue;
+    --project-tile-background-color: red;
+    --project-title-hover-color: orange;
 }
 
 /* Base reset */
@@ -46,35 +50,21 @@ html {
     left: 0;
     top: 0;
     border-left: 0 solid transparent;
-    border-right: 45vw solid transparent;
-    border-top: 95vh solid var(--triangle-color);
+    border-right: 5vw solid transparent;
+    border-top: 85vh solid skyblue;
     z-index: 10;
 }
 
-.title {
+.inverted-triangle {
     position: absolute;
-    top: var(--navbar-distance-to-top);
-    left: 5vw;
-    height: var(--navbar-height);
-    z-index: 100;
-}
-
-.title--first-line {
-    font-family: 'Cantarell', sans-serif;
-    font-size: 4rem;
-}
-
-.title--second-line {
-    margin-top: 10px;
-    margin-left: 12px;
-    font-family: 'Cantarell', sans-serif;
-    font-size: 2.25rem;
-}
-
-#personal-picture {
-    margin-top: 65px;
-    width: 40%;
-    height: auto;
+    width: 0;
+    height: 0;
+    right: 0;
+    bottom: 0;
+    border-right: 0 solid transparent;
+    border-left: 5vw solid transparent;
+    border-bottom: 100px solid black;
+    z-index: 10;
 }
 
 #navbar {
@@ -116,14 +106,35 @@ html {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: var(--main-background-color);
+    background-image: var(--main-background-color);
 }
 
-#welcome-section .description {
-    position: absolute;
-    left: 35vw;
-    top: calc(var(--navbar-distance-to-top) + var(--navbar-height) + var(--welcome-section-top-offset));
-    right: 5vw;
+#welcome-section .title {
+    width: 100%;
+    height: 100%;
+    left: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*top: calc(var(--navbar-distance-to-top) + var(--navbar-height) + var(--welcome-section-top-offset));*/
+    /*top: calc(100vh / 2);*/
+}
+
+#welcome-section .title > h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 6rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--main-title-color);
+}
+
+#welcome-section .title > p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--main-subtitle-color);
 }
 
 #welcome-section p {
@@ -133,15 +144,16 @@ html {
     font-size: 2rem;
 }
 
-p.stress {
-    font-weight: bold;
-}
-
 #projects {
-    background-color: var(--project-section-background-color);
+    position: relative;
+    /*background-color: var(--project-section-background-color);*/
+    background-color: #09203f;
+background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
 }
 
 .section-content {
+    width:80%;
+    margin: auto;
     padding-top: 40px;
 }
 
@@ -149,4 +161,48 @@ h2 {
     text-align: center;
     font-size: 3rem;
     font-family: 'Roboto', sans-serif;
+    margin-bottom: 4rem;
 }
+
+/* "Automagic" image grid using no media queries */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    /* max-width: 1280px; */
+    margin: 0 auto;
+    margin-bottom: 6rem;
+  }
+
+  @media (max-width: 30.625em) {  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .project {
+    background: var(--project-tile-background-color);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+  }
+
+  .code {
+    color: var(--project-tile-background-color);
+    transition: color 0.3s ease-out;
+  }
+
+  .project:hover .code {
+    color: var(--project-title-hover-color);
+  }
+
+  .project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .project-title {
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+  }
